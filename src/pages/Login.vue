@@ -13,7 +13,13 @@
     <!-- 用户名密码输入框 -->
     <div>
       <!-- 输入框组件 -->
-      <AuthInput placeholder="手机号码" :value='form.username' @input="handleUsername"></AuthInput>
+      <AuthInput 
+      placeholder="手机号码" 
+      :value='form.username' 
+      @input="handleUsername" 
+      :rule="/^1[0-9]{4,10}$/" 
+      err_message="手机号码格式不正确" 
+      ></AuthInput>
     </div>
 
     <!-- 登录按钮 -->
