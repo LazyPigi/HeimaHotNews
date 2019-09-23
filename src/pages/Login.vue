@@ -23,12 +23,18 @@
 
       <AuthInput 
       placeholder="密码" 
+      type="password"
       v-model='form.password' 
       
       :rule="/^[0-9a-zA-Z]{3,12}$/" 
       err_message="密码格式不正确" 
       ></AuthInput>
     </div>
+
+    <p class="tips">
+      没有账号？
+      <router-link to="/register">去注册</router-link>
+    </p>
 
     <!-- 登录按钮 -->
     <!-- <button @click="handleSubmit">登录按钮</button> -->
@@ -83,6 +89,7 @@ export default {
 
         if(message === "登录成功"){
           // 跳转到首页
+          console.log(123)
           this.$router.push("/")
         }
       })
@@ -120,6 +127,15 @@ export default {
 .inputs {
   input {
     margin-bottom: 20px;
+  }
+}
+
+.tips {
+  text-align: right;
+  margin-bottom: 20px;
+
+  a {
+    color: #3385ff;
   }
 }
 </style>
