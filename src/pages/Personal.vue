@@ -15,12 +15,22 @@
 
         <span class="iconfont iconjiantou1"></span>
         </div>
+
+        <!-- 调用条形组件 -->
+        <CellBar/>
     </div>
 </template>
 
 <script>
-export default {
+// 导入条形组件
+import CellBar from "@/components/CellBar"
 
+
+export default {
+    
+    components: {
+        CellBar
+    }
 }
 </script>
 

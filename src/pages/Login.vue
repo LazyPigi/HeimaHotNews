@@ -90,7 +90,7 @@ export default {
         if(message === "登录成功"){
           // 跳转到首页
           console.log(123)
-          this.$router.push("/")
+          this.$router.push("/personal")
         }
       })
     }
