@@ -1,8 +1,9 @@
 <template>
-    <div class="cell-wrap">
+<!-- $event 是模板事件对象 -->
+    <div class="cell-wrap" @click="$emit('click',$event)">
         <div class="cell">
-            <span>我的关注</span>
-            <i>关注的用户</i>
+            <span>{{label}}</span>
+            <i>{{text}}</i>
             <span class="iconfont iconjiantou1"></span>
         </div>
     </div>
@@ -10,8 +11,10 @@
 
 <script>
 export default {
+    // label是左侧的文件，text是右侧的文字
+    props: ["label", "text"]
 
-}
+};
 </script>
 
 <style scoped lang="less">
