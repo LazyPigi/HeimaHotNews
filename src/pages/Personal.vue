@@ -1,23 +1,23 @@
 <template>
     <div>
-        <div class="profile">
-            <!-- <img src="http://img1.imgtn.bdimg.com/it/u=2357912857,682090914&fm=26&gp=0.jpg" alt=""> -->
+        <router-link to="/edit_profile">
+            <div class="profile">
             <!-- $aioxs.defaults.baseURL 读取axios的服务器路径 -->
-            <!-- <img :src="$axios.defaults.baseURL + profile.head_img" alt=""> -->
-            <img :src="profile.head_img" alt="">
+                <img :src="profile.head_img" alt="">
 
-            <div class="profile-center">
-                <div class="name">
-                    <span class="iconfont iconxingbienan"></span>
-                    {{profile.nickname}}
+                <div class="profile-center">
+                    <div class="name">
+                        <span class="iconfont iconxingbienan"></span>
+                        {{profile.nickname}}
+                    </div>
+                    <div class="time">
+                    2019-9-24
+                    </div>
                 </div>
-            <div class="time">
-                2019-9-24
-            </div>
-            </div>
 
-        <span class="iconfont iconjiantou1"></span>
-        </div>
+                <span class="iconfont iconjiantou1"></span>
+            </div>
+        </router-link>
 
         <!-- 调用条形组件 -->
 
