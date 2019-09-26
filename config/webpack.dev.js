@@ -10,8 +10,8 @@ module.exports = merge( base, {
 
     // + 开发服务配置
     devServer: {
-        port: 8000, // 默认端口是8080
+        port: 8001, // 默认端口是8080  win10的8000端口给别的应用占用了，所以要改成8001
         stats: 'errors-only' ,
-        // host: '0.0.0.0'    /* 支持手机ip访问 */
+        host: '0.0.0.0'    /* 支持手机ip访问 */
     },
-})
+}) 
