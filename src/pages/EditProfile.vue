@@ -67,7 +67,7 @@ export default {
       show2: false,
       // 显示性别的弹窗
       show3: false,
-      
+      // 性别缓存
       genderCache: `0`,
     };
   },
@@ -179,14 +179,16 @@ export default {
       }
     }).then(res => {
       const { data } = res.data;
-
+      console.log(data);
+      
       if (data) {
         // 保存到data
         this.profile = data;
 
         // 把后台返回的性别复制genderCache,性别需要转换成字符串
         this.genderCache = String(data.gender);
-
+          console.log(this.genderCache);
+          
         // 如果用户有头像
         if (data.head_img) {
           this.profile.head_img = this.$axios.defaults.baseURL + data.head_img;

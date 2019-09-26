@@ -12,6 +12,6 @@ module.exports = merge( base, {
     devServer: {
         port: 8000, // 默认端口是8080
         stats: 'errors-only' ,
-        host: '0.0.0.0'    /* 支持手机ip访问 */
+        // host: '0.0.0.0'    /* 支持手机ip访问 */
     },
 })
