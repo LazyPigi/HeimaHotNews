@@ -20,6 +20,10 @@ export default {
 
 
 /* 公共样式 */
+html,body {
+  background: #f6f6f6;
+}
+
 *{
   margin: 0;
   padding: 0;

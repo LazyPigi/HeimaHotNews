@@ -39,7 +39,7 @@ export default {
             active: 1
         }
     }
-}
+}              
 </script>
 
 <style scoped lang="less">
@@ -77,5 +77,14 @@ export default {
         font-size: 14px;
         margin-left: 5px;
     }
+}
+
+/deep/ .van-tabs__nav {
+    background: #f6f6f6;
+}
+
+/deep/ .van-tabs__line {
+    width: 40px;
+    height: 1px;
 }
 </style>
