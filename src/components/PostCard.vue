@@ -3,25 +3,23 @@
         <!-- 左侧文字 -->
         <div class="card-left">
             <div class="post-title">
-                回忆与我都不爱说话,偶尔我会想起他,心里有一些牵挂,有些爱却不得不各安天涯...
-                回忆与我都不爱说话,偶尔我会想起他,心里有一些牵挂,有些爱却不得不各安天涯...
-                回忆与我都不爱说话,偶尔我会想起他,心里有一些牵挂,有些爱却不得不各安天涯...
+                {{post.title}}
             </div>
             <p class="post-info">
-                <span>网易云音乐</span>
-                <span>100跟帖</span>
+                <span>{{post.user.nickname}}</span>
+                <span>{{post.comment_length}}跟帖</span>
             </p>
         </div>
 
         <div class="card-img">
-            <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3815925718,1170141200&fm=26&gp=0.jpg" alt="">
+            <img :src="post.cover[0].url" alt="">
         </div>
     </div>
 </template>
 
 <script>
 export default {
-
+    props: ['post']
 }
 </script>
 
@@ -34,6 +32,10 @@ export default {
         border-bottom: 1px #ccc solid;
 
         .card-left{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80 / 360 * 100vw;
             flex:1;
 
             .post-title{
